@@ -52,6 +52,7 @@ define apache::vhost(
     $redirect_ssl       = $apache::params::redirect_ssl,
     $options            = $apache::params::options,
     $override           = $apache::params::override,
+    $environment_vars   = {},
     $apache_name        = $apache::params::apache_name,
     $vhost_name         = $apache::params::vhost_name,
     $logroot            = "/var/log/$apache::params::apache_name",
