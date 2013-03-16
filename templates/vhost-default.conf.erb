@@ -15,7 +15,7 @@ NameVirtualHost <%= vhost_name %>:<%= port %>
 <%= "  ServerAlias #{serveraliases}" %>
 <% end -%>
 <% if environment_vars.is_a? Hash -%>
-<% environment_vars.each do |name, value| -%><%= "  SetEnv #{name} \"#{value}\"" %><% end -%>
+<% environment_vars.each do |name, value| -%><%= "  SetEnv #{name} \"#{value}\"\n" %><% end -%>
 <% end -%>
   DocumentRoot <%= docroot %>
   <Directory <%= docroot %>>
