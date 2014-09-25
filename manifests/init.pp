@@ -313,7 +313,7 @@ class apache (
 
     ::apache::vhost { 'default':
       ensure          => $default_vhost_ensure,
-      port            => 80,
+      port            => '80',
       docroot         => $docroot,
       scriptalias     => $scriptalias,
       serveradmin     => $serveradmin,
@@ -327,7 +327,7 @@ class apache (
     }
     ::apache::vhost { 'default-ssl':
       ensure          => $default_ssl_vhost_ensure,
-      port            => 443,
+      port            => '443',
       ssl             => true,
       docroot         => $docroot,
       scriptalias     => $scriptalias,
